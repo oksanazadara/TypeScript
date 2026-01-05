@@ -40,7 +40,7 @@ type Student = {
 const students: Student[] = [
     {name: "Jack", course: 3, averageCrade: 78 },
     {name: "Camila", course: 2, averageCrade: 90 },
-    {name: "Samuei", course: 4, averageCrade: 98 },
+    {name: "Samuel", course: 4, averageCrade: 98 },
     {name: "Donald", course: 4, averageCrade: 50 }
 ];
 
@@ -52,10 +52,14 @@ for (let student of students) {
 console.log(middleGrade/students.length);
 
 let maxGrade:number = students[0].averageCrade;
+let bestStudent: Student = {name: '', course: 0, averageCrade:0}
+
 for (let i = 1; i < students.length; i++ ) {
     if (students[i].averageCrade > maxGrade) {
-        maxGrade = students[i].averageCrade;
+        bestStudent = students[i];
+        
+
     }
 }
 
-console.log(maxGrade);
+console.log(bestStudent.averageCrade, bestStudent.course, bestStudent.name); 
